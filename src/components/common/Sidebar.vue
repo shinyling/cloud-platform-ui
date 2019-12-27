@@ -44,6 +44,11 @@
                         title: '系统首页'
                     },
                     {
+                        icon: 'el-icon-lx-home',
+                        index: 'product',
+                        title: '商品管理'
+                    },
+                    {
                         icon: 'el-icon-lx-cascades',
                         index: 'table',
                         title: '基础表格'
@@ -134,7 +139,7 @@
         display: block;
         position: absolute;
         left: 0;
-        top: 70px;
+        top: 60px;
         bottom:0;
         overflow-y: scroll;
     }
@@ -142,7 +147,7 @@
         width: 0;
     }
     .sidebar-el-menu:not(.el-menu--collapse){
-        width: 250px;
+        width: 200px;
     }
     .sidebar > ul {
         height:100%;

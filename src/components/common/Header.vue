@@ -1,10 +1,10 @@
 <template>
     <div class="header">
+        <div class="logo">后台管理系统</div>
         <!-- 折叠按钮 -->
         <div class="collapse-btn" @click="collapseChage">
             <i class="el-icon-menu"></i>
         </div>
-        <div class="logo">后台管理系统</div>
         <div class="header-right">
             <div class="header-user-con">
                 <!-- 全屏显示 -->
@@ -113,7 +113,7 @@
         position: relative;
         box-sizing: border-box;
         width: 100%;
-        height: 70px;
+        height: 60px;
         font-size: 22px;
         color: #fff;
     }
@@ -124,9 +124,12 @@
         line-height: 70px;
     }
     .header .logo{
+        letter-spacing:.1em;
         float: left;
-        width:250px;
+        width: 180px;
         line-height: 70px;
+        text-align: center;
+        font-family: 华文行楷;
     }
     .header-right{
         float: right;
