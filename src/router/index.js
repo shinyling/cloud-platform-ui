@@ -89,6 +89,21 @@ export default new Router({
                     path: '/403',
                     component: resolve => require(['../components/page/403.vue'], resolve),
                     meta: { title: '403' }
+                },
+                {
+                    path: '/user',
+                    component: resolve => require(['../components/page/User.vue'], resolve),
+                    meta: { title: '用户管理' }
+                },
+                {
+                    path: '/user',
+                    component: resolve => require(['../components/page/Role.vue'], resolve),
+                    meta: { title: '角色管理' }
+                },
+                {
+                    path: '/menu',
+                    component: resolve => require(['../components/page/Menu.vue'], resolve),
+                    meta: { title: '菜单管理' }
                 }
             ]
         },

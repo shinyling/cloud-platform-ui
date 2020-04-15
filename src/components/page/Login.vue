@@ -28,12 +28,16 @@
 </template>
 
 <script>
+import {login} from "../../api/user";
 export default {
     data: function() {
         return {
             param: {
-                username: 'admin',
-                password: '123123',
+                username: '13786132605',
+                password: '123456',
+                grant_type: 'password',
+                client_id: 'client',
+                client_secret: 'secret'
             },
             rules: {
                 username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
@@ -45,9 +49,19 @@ export default {
         submitForm() {
             this.$refs.login.validate(valid => {
                 if (valid) {
-                    this.$message.success('登录成功');
-                    localStorage.setItem('ms_username', this.param.username);
-                    this.$router.push('/');
+                    return new Promise(((resolve, reject) => {
+                        login(this.param)
+                            .then(response=>{
+                            console.log(response.access_token);
+                                this.$message.success('登录成功');
+                                localStorage.setItem('token', response.access_token);
+                                localStorage.setItem('user_info', response.user_info);
+                                this.$router.push('/');
+                            resolve();
+                        }).catch(error => {
+                            reject(error);
+                        })
+                    }))
                 } else {
                     this.$message.error('请输入账号和密码');
                     console.log('error submit!!');

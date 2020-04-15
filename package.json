@@ -18,11 +18,14 @@
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.3",
     "vue-schart": "^2.0.0",
+    "vue-ztree-2.0": "^1.0.4",
     "vuedraggable": "^2.17.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }

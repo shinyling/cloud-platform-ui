@@ -1,16 +1,25 @@
 module.exports = {
-    baseUrl: './',
+    publicPath: './',
     assetsDir: 'static',
     productionSourceMap: false,
-    // devServer: {
-    //     proxy: {
-    //         '/api':{
-    //             target:'http://jsonplaceholder.typicode.com',
-    //             changeOrigin:true,
-    //             pathRewrite:{
-    //                 '/api':''
-    //             }
-    //         }
-    //     }
-    // }
+    // webpack配置 - 简单配置方式
+    configureWebpack: {
+        resolve: {
+            alias: {
+                // 别名
+                vue$: "vue/dist/vue.esm.js"
+            }
+        }
+    },
+    devServer: {
+        proxy: {
+            '/api':{
+                target:'http://localhost:8888',
+                changeOrigin:true,
+                pathRewrite:{
+                    '/api':''
+                }
+            }
+        }
+    }
 }

@@ -16,7 +16,7 @@
                                 </el-menu-item>
                             </el-submenu>
                             <el-menu-item v-else :index="subItem.index" :key="subItem.index">
-                                {{ subItem.title }}
+                                <i :class="subItem.icon"></i><span slot="title">{{ subItem.title }}</span>
                             </el-menu-item>
                         </template>
                     </el-submenu>
@@ -114,6 +114,28 @@
                             {
                                 index: '404',
                                 title: '404页面'
+                            }
+                        ]
+                    },
+                    {
+                        icon: 'el-icon-lx-settings',
+                        index: '7',
+                        title: '系统设置',
+                        subs: [
+                            {
+                                icon: 'el-icon-lx-people',
+                                index: 'user',
+                                title: '用户管理'
+                            },
+                            {
+                                icon: 'el-icon-ali-relationship',
+                                index: 'role',
+                                title: '角色管理'
+                            },
+                            {
+                                icon: 'el-icon-ali-menu',
+                                index: 'menu',
+                                title: '菜单管理'
                             }
                         ]
                     }
