@@ -5,6 +5,17 @@ const MENU_LOAD_PARENT='api/platform/menu/loadParent'
 const MENU_SAVE='api/platform/menu/add'
 const MENU_EDIT='api/platform/menu/update'
 const MENU_DELETE='api/platform/menu/delete'
+const MENU_TREE='api/platform/menu/menuTree'
+
+export function loadTree(){
+    return axios({
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        url: MENU_TREE,
+        method: 'get'
+    })
+}
 
 export function loadPageData(data){
     return axios({
